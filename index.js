@@ -122,9 +122,9 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   /** What we know
    * Money = $175
    * avg per gallon = $3
-   * gallonsNeeded55 = 50 
-   * gallonsNeeded60 = 54
-   * gallonsNeeded75 = 65
+   * gal30 = 30
+   * gal28 = 28
+   * gal23 = 23
    */
 
 
