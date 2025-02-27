@@ -110,7 +110,7 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   const avgFuel = 3
 
   const gallonsNeeded55 = (tripDistance / gal30)
-  console.log(`I will need ${gallonsNeeded55} gallons for the entire trip when traveling at 55 miles per hour while getting 30 miles per gallon, which also makes the most sense when it comes to gallons.`)
+  console.log(`I will need ${gallonsNeeded55} gallons for the entire trip when traveling at 55 miles per hour while getting 30 miles per gallon, which also makes the most sense because you get the most gallons.`)
 
   const gallonsNeeded60 = (tripDistance / gal28)
   console.log(`I will need ${gallonsNeeded60} for the entire trip when traveling at 60 miles per hour while getting 28 miles per gallon.`)
