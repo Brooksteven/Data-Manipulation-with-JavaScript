@@ -128,14 +128,14 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
    */
 
 
-  const fuelExp55 = (gallonsNeeded55 * avgFuel) < budget
-  console.log(`Will the budget be enough for the trip: ${fuelExp55}, and will also make the most sense because it is the most affordable.`)
+  const fuelExp55 = (gal30 * avgFuel) < budget
+  console.log(`Will the budget be enough for the trip: ${fuelExp55}`)
 
-  const fuelExp60 = (gallonsNeeded60 * avgFuel) < budget
+  const fuelExp60 = (gal28 * avgFuel) < budget
   console.log(`Will the budget be enough for the trip: ${fuelExp60}`)
 
-  const fuelExp75 = (gallonsNeeded75 * avgFuel) < budget
-  console.log(`Will the budget be enough for the trip: ${fuelExp75}`)
+  const fuelExp75 = (gal23 * avgFuel) < budget
+  console.log(`Will the budget be enough for the trip: ${fuelExp75}, and will also make the most sense because it is the most affordable.`)
 
   //Question 3: How long will the trip take, in hours?
   /**what we know
@@ -154,6 +154,3 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   const tripHours75 = (tripDistance / mile75)
   console.log(`The trip will take ${tripHours75} in hours, which will make the most sense for the trip hours wise.`)
 
-
-  //what will make the most sense when we factor everything
-  console.log(`All together I believe ${mile55} miles per hour will make the most sense because not only are you using the least amount of gallons, but ${mile55} miles per hour is also where you'll spend the least amount of money.`)
