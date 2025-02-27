@@ -75,3 +75,49 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   const isMulti = (isSum * n3)
   const isRemain = ((isMulti / n4) % 2)
   console.log(`How much is the Remainder: ${isRemain}`)
+
+
+
+
+  //PART 2
+
+  /**info notes 
+  *distance of trip = 1500 miles
+  *55mil/hr = 30mil/gal
+  *60mil/hr = 28mil/gal
+  *75mil/hr = 23mil/gal
+  *Money = $175
+  *Cost of fuel = $3/gal
+  */
+
+  //Question 1: How many gallons of fuel will you need for the entire trip
+  /** What we know
+   * entire trip = 1500 miles
+   * 55mil/hr = 30mil/gal
+   * 1500mil / 55mil/hr = 30hr
+   * 30hr * 30mil/gal = 900 miles
+   * For the entire trip I will need 900 gallons
+   */
+  const tripDistance = 1500
+  const mile55 = 55
+  const mile60 = 60
+  const mile75 = 75
+  const gal30 = 30
+  const gal28 = 28
+  const gal23 = 23
+  const budget = 175
+  const avgFuel = 3
+
+  const gallonsNeeded55 = ((tripDistance / mile55) * gal30)
+  console.log(`I will need ${gallonsNeeded55} for the entire trip when traveling at 55 miles per hour while getting 30 miles per gallon.`)
+
+  const gallonsNeeded60 = ((tripDistance / mile60) * gal28)
+  console.log(`I will need ${gallonsNeeded60} for the entire trip when traveling at 60 miles per hour while getting 28 miles per gallon.`)
+
+  const gallonsNeeded75 = ((tripDistance / mile75) * gal23)
+  console.log(`I will need ${gallonsNeeded75} for the entire trip when traveling at 75 miles per hour while getting 23 miles per gallon, which makes the most sense for the trip.`)
+
+  //Question 2: Will your budget be enough to cover the fuel expense?
+  /** What we know
+   * We'll need 
+   */
