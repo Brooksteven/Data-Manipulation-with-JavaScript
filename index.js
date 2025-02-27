@@ -94,9 +94,10 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   /** What we know
    * entire trip = 1500 miles
    * 55mil/hr = 30mil/gal
-   * 1500mil / 55mil/hr = 30hr
-   * 30hr * 30mil/gal = 900 miles
-   * For the entire trip I will need 900 gallons
+   * 60mil/hr = 28mil/gal
+   * 75mil/hr = 23mil/gal
+   * 1500mil / 30mil/gal = 50 gal
+   * 
    */
   const tripDistance = 1500
   const mile55 = 55
@@ -108,16 +109,51 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   const budget = 175
   const avgFuel = 3
 
-  const gallonsNeeded55 = ((tripDistance / mile55) * gal30)
-  console.log(`I will need ${gallonsNeeded55} for the entire trip when traveling at 55 miles per hour while getting 30 miles per gallon.`)
+  const gallonsNeeded55 = (tripDistance / gal30)
+  console.log(`I will need ${gallonsNeeded55} gallons for the entire trip when traveling at 55 miles per hour while getting 30 miles per gallon, which also makes the most sense when it comes to gallons.`)
 
-  const gallonsNeeded60 = ((tripDistance / mile60) * gal28)
+  const gallonsNeeded60 = (tripDistance / gal28)
   console.log(`I will need ${gallonsNeeded60} for the entire trip when traveling at 60 miles per hour while getting 28 miles per gallon.`)
 
-  const gallonsNeeded75 = ((tripDistance / mile75) * gal23)
-  console.log(`I will need ${gallonsNeeded75} for the entire trip when traveling at 75 miles per hour while getting 23 miles per gallon, which makes the most sense for the trip.`)
+  const gallonsNeeded75 = (tripDistance / gal23)
+  console.log(`I will need ${gallonsNeeded75} for the entire trip when traveling at 75 miles per hour while getting 23 miles per gallon.`)
 
   //Question 2: Will your budget be enough to cover the fuel expense?
   /** What we know
-   * We'll need 
+   * Money = $175
+   * avg per gallon = $3
+   * gallonsNeeded55 = 50 
+   * gallonsNeeded60 = 54
+   * gallonsNeeded75 = 65
    */
+
+
+  const fuelExp55 = (gallonsNeeded55 * avgFuel) < budget
+  console.log(`Will the budget be enough for the trip: ${fuelExp55}, and will also make the most sense because it is the most affordable.`)
+
+  const fuelExp60 = (gallonsNeeded60 * avgFuel) < budget
+  console.log(`Will the budget be enough for the trip: ${fuelExp60}`)
+
+  const fuelExp75 = (gallonsNeeded75 * avgFuel) < budget
+  console.log(`Will the budget be enough for the trip: ${fuelExp75}`)
+
+  //Question 3: How long will the trip take, in hours?
+  /**what we know
+   * total trip miles = 1500 miles
+   * 55mil/hr
+   * 60 mil/hr
+   * 75mil/hr
+   */
+
+  const tripHours55 = (tripDistance / mile55)
+  console.log(`The trip will take ${tripHours55} in hours.`)
+
+  const tripHours60 = (tripDistance / mile60)
+  console.log(`The trip will take ${tripHours60} in hours.`)
+
+  const tripHours75 = (tripDistance / mile75)
+  console.log(`The trip will take ${tripHours75} in hours, which will make the most sense for the trip hours wise.`)
+
+
+  //what will make the most sense when we factor everything
+  console.log(`All together I believe ${mile55} miles per hour will make the most sense because not only are you using the least amount of gallons, but ${mile55} miles per hour is also where you'll spend the least amount of money.`)
